@@ -54,7 +54,7 @@
 <script>
 import Header from '@/components/template/Header.vue'
 import PageTitle from '@/components/template/PageTitle.vue'
-import List from '@/components/Lista/Left/ListLeft.vue'
+import List from '@/components/Filters/ListLeft.vue'
 import ItemTog from '@/components/Toggle/ItemTog.vue'
 import Title from '@/components/template/TitleS.vue'
 export default {

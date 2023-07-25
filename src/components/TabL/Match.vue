@@ -1,7 +1,7 @@
 <template>
     <div class="itMatch">
         <div class="team">
-            <div class="info" style="width: 320px">
+            <div v-b-toggle.sidebar-no-header class="info" style="width: 320px">
                 <div class="count">
                     <div class="apres">
                         <span class="time">{{ tm }}, {{ hr }}</span>

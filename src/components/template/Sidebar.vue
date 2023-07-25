@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-button v-b-toggle.sidebar-no-header>Toggle Sidebar</b-button>
+    
     <b-sidebar id="sidebar-no-header"  class="bar"
     aria-labelledby="sidebar-no-header-title"
      no-header 
@@ -9,21 +9,23 @@
       <template #default="{ hide }">
         <div class="p-3 head">
           <h4 id="sidebar-no-header-title">Match Preview</h4>
-          <b-button variant="primary" block>VIEW H2H</b-button>
-          <b-button variant="secondary" block @click="hide">Close</b-button>
+          <div class="btns">
+            <button class="btn-lin">VIEW H2H</button>
+            <button class="bt" block @click="hide">Close</button>
+          </div>
         </div>
         <div class="side-winner">
             <div class="sid-win">
               <div class="titles">
-                <div class="side-title active">Overview</div>
-                <div class="side-title">Odds</div>
-                <div class="side-title">Predictions</div>
+                <div class="side-title" @click="Over" :class="activeOver">Overview</div>
+                <div class="side-title" @click="Odds" :class="activeOdds">Odds</div>
+                <div class="side-title" @click="Pred" :class="activePred">Predictions</div>
               </div>
               <div class="toggle">
                 <i class="fa fa-star star"  id="show-btn" @click="open = !open"></i>
               </div>
             </div>
-            <ul class="over-list pad-over" v-show="open">
+            <ul v-if="open === 'over'" class="over-list pad-over">
               <Item icon="" text="Mercedes vs El Porvenir"/>
               <li class="over-it">
                 <span class="text">AVG Goals</span> 
@@ -58,8 +60,11 @@
                 <span class="val-match">2.13</span>
               </li>
             </ul>
-            <ul class="over-list">
-              <ItemMatch />
+            <ul v-if="open === 'odds'" class="over-list">
+              <ItemMatch titleTog="Result" fieldOver="Home Win" val="1.46" />
+              <ItemMatch titleTog="Goals (Over)" fieldOver="Over 0.5 Goals" val="N/A" drawOvUnd="Over 1.5 Goals" val1="N/A" />
+              <ItemMatch titleTog="Goals (Under)" fieldOver="Under 0.5 Goals" val="N/A" drawOvUnd="Under 1.5 Goals" val1="N/A" />
+              <ItemMatch titleTog="BTTS" fieldOver="Yes" val="N/A" drawOvUnd="No" val1="N/A" />
             </ul>
         </div>
       </template>
@@ -75,16 +80,68 @@ export default {
   components: {Item, ItemMatch},
   data(){
     return {
-      open: false
+      open: 'over',
+    }
+  },
+  computed: {
+    activeOver() {
+      return{
+        active: this.open === 'over' 
+      }
+    },
+    activeOdds() {
+      return{
+        active: this.open === 'odds' 
+      }
+    },
+    activePred() {
+      return{
+        active: this.open === 'pred' 
+      }
+    },
+  },
+  methods: {
+    Over() {
+      this.open = 'over'
+    },
+    Odds() {
+      this.open = 'odds'
+    },
+    Pred() {
+      this.open = 'pred'
     }
   }
 }
 </script>
 <style>
   .bar > .b-sidebar{
-    width: 415px;
+    width: 400px;
   }
-
+  .btns{
+    display: flex;
+    gap: 4px;
+  }
+  .btn-lin {
+    background: #2459c7;
+    font-weight: 900;
+    color: #FFF!important;
+    font-size: 16px;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 4px;
+    display: inline;
+    line-height: 25px;
+    text-decoration: none;
+    width: 100%;
+    text-transform: uppercase;
+  }
+  .bt{
+    background: none;
+    color: #71859a;
+    border: none;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
   .head {
     display: flex;
     justify-content: space-between;

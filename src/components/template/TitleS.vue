@@ -12,10 +12,10 @@ export default {
     .title{
         padding: 0;
         margin-bottom: 1.5em!important;
-        font-size: 14px;
+        font-size: 15px;
         display: block;
         color: #35518c;
-        font-weight: 500;
+        font-weight: 600;
     }
       
 </style>

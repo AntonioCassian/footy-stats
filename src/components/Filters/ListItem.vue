@@ -1,12 +1,12 @@
 <template>
-    <b-list-group-item class="item" href="#some-link">
+    <b-list-group-item class="item" href="#some-link" :class="{active: this.actived}">
         <i v-if="icon" :class="icon"></i> {{ text }}</b-list-group-item>
 </template>
 
 <script>
 export default {
     name: 'ListItem',
-    props: ['text', 'icon']
+    props: ['text', 'icon', 'actived']
 }
 </script>
 <style scoped>
@@ -31,7 +31,11 @@ export default {
         background: #295cc4;
         color: #fff;
     }
-    .list-group-item[data-v-d7f90866] {
+    .list-group-item[data-v-53c66b96] {
         border-radius: 0;
+    }
+    .active[data-v-53c66b96]{
+        background: #55a255!important;
+        color: #fff!important;
     }
 </style>

@@ -1,8 +1,7 @@
 <template>
-    <ul class="sid-odds">
-        <li class="sid-it" @click="tog">
-        <div class="sid-text" > 
-            Result
+        <li class="sid-it">
+        <div class="sid-text" @click="tog" > 
+            {{titleTog}}
         
             <i class="fa fa-caret-down" aria-hidden="true"></i>
         </div>
@@ -11,162 +10,64 @@
                 <ul class="min-list">
                     <li class="min-it">
                         <div class="text-match">
-                            Home Win
+                            {{ fieldOver }} 
                         </div>
 
                         <div class="val-match">
-                            1.87
+                            {{ val }}
                         </div>
                     </li>
+
                     <li class="min-it">
                         <div class="text-match">
-                            Draw
+                            {{ drawOvUnd }}
                         </div>
 
                         <div class="val-match">
-                            3.85
+                            {{ val1 }}
                         </div>
                     </li>
-                    <li class="min-it">
+
+                    <li v-if="awOvUndTr" class="min-it">
                         <div class="text-match">
-                            Away Win
+                            {{ awOvUndTr }}
                         </div>
 
                         <div class="val-match">
-                            3.42
+                            {{ val2 }}
                         </div>
                     </li>
+
+                    <li v-if="overUnder" class="min-it">
+                        <div class="text-match">
+                            {{ overUnder }}
+                        </div>
+
+                        <div class="val-match">
+                            {{ val3 }}
+                        </div>
+                    </li>
+
+                    <li v-if="overUnder4" class="min-it">
+                        <div class="text-match">
+                            {{ overUnder4 }}
+                        </div>
+
+                        <div class="val-match">
+                            {{ val4 }}
+                        </div>
+                    </li>
+
                 </ul>
             </div>
         </li>
-
-        <li class="sid-it" @click="tog">
-        <div class="sid-text" > 
-            Result
-        
-            <i class="fa fa-caret-down" aria-hidden="true"></i>
-        </div>
-
-        <div class="min-li" v-if="this.toggle === true">
-                <ul class="min-list">
-                    <li class="min-it">
-                        <div class="text-match">
-                            Home Win
-                        </div>
-
-                        <div class="val-match">
-                            1.87
-                        </div>
-                    </li>
-                    <li class="min-it">
-                        <div class="text-match">
-                            Draw
-                        </div>
-
-                        <div class="val-match">
-                            3.85
-                        </div>
-                    </li>
-                    <li class="min-it">
-                        <div class="text-match">
-                            Away Win
-                        </div>
-
-                        <div class="val-match">
-                            3.42
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </li>
-
-        <li class="sid-it" @click="tog">
-        <div class="sid-text" > 
-            Result
-        
-            <i class="fa fa-caret-down" aria-hidden="true"></i>
-        </div>
-
-        <div class="min-li" v-if="this.toggle === true">
-                <ul class="min-list">
-                    <li class="min-it">
-                        <div class="text-match">
-                            Home Win
-                        </div>
-
-                        <div class="val-match">
-                            1.87
-                        </div>
-                    </li>
-                    <li class="min-it">
-                        <div class="text-match">
-                            Draw
-                        </div>
-
-                        <div class="val-match">
-                            3.85
-                        </div>
-                    </li>
-                    <li class="min-it">
-                        <div class="text-match">
-                            Away Win
-                        </div>
-
-                        <div class="val-match">
-                            3.42
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </li>
-
-        <li class="sid-it" @click="tog">
-        <div class="sid-text" > 
-            Result
-        
-            <i class="fa fa-caret-down" aria-hidden="true"></i>
-        </div>
-
-        <div class="min-li" v-if="this.toggle === true">
-                <ul class="min-list">
-                    <li class="min-it">
-                        <div class="text-match">
-                            Home Win
-                        </div>
-
-                        <div class="val-match">
-                            1.87
-                        </div>
-                    </li>
-                    <li class="min-it">
-                        <div class="text-match">
-                            Draw
-                        </div>
-
-                        <div class="val-match">
-                            3.85
-                        </div>
-                    </li>
-                    <li class="min-it">
-                        <div class="text-match">
-                            Away Win
-                        </div>
-
-                        <div class="val-match">
-                            3.42
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </li>
-
-      
-    </ul>
+    
 </template>
 
 <script>
 export default {
     name:'ItemTog',
+    props: ['titleTog', 'fieldOver', 'drawOvUnd', 'awOvUndTr', 'overUnder', 'overUnder4' ,'val', 'val1', 'val2', 'val3', 'val4'],
     data () {
         return {
             toggle: false

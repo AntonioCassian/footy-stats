@@ -16,19 +16,14 @@
             <div class="di-f">
                 <aside class="pd-l n-width">
                     <Title title="Search Actions"/>
-                        <b-list-group>
-                            <Item v-for="li in list" :key="li.id" :text="li.text" :icon="li.icon"/>
+                        <b-list-group class="list-filt">
+                            <Item v-for="li in list" :key="li.id" :text="li.text" :icon="li.icon" :actived="li.actived"/>
                         </b-list-group>
                     <Title title="Sort Teams"/>
+                    <Form />
                     
-                    <Sidebar v-show="side" />
-                    <form>
-                        
-                    </form>
-                    <Title title="Similar Tools"/>
-                    <b-list-group>
-                            <Item v-for="li in lista" :key="li.id" :text="li.text" :icon="li.icon"/>
-                        </b-list-group>
+                    <Sidebar />
+                    
                 </aside>
 
                 <main class="pd">
@@ -62,7 +57,8 @@
 import Header from '@/components/template/Header.vue'
 import PageTitle from '@/components/template/PageTitle.vue'
 import TeamHeader from '@/components/TabL/TeamHeader.vue'
-import Item from '@/components/Lista/Left/ListItem.vue'
+import Item from '@/components/Filters/ListItem.vue'
+import Form from '@/components/Filters/Form.vue'
 import ItHead from '@/components/TabL/ItHead.vue'
 import Title from '@/components/template/TitleS.vue'
 import Match from '@/components/TabL/Match.vue'
@@ -71,14 +67,18 @@ import Sidebar from '@/components/template/Sidebar.vue'
 import Modal from '@/components/template/Modal.vue'
 export default {
     name: "Leagues",
-    components: {Header, PageTitle, Title, Item, TeamHeader, ItHead, Match, Profit, Sidebar, Modal},
+    components: {Header, PageTitle, Title, Item, Form, TeamHeader, ItHead, Match, Profit, Sidebar, Modal},
     data(){
         return {
             open: false,
-            side: true,
             list: [
                 {'id':0, 'text':'Edit Filters', 'icon': 'fa fa-sliders'},
-                {'id':1, 'text':'Reset Filters', 'icon': 'fa fa-undo'}
+                {'id':1, 'text':'Saved Games', 'icon': 'fa fa-star'},
+                {'id':2, 'text':'Reset Filters', 'icon': 'fa fa-undo'},
+                {'id':3, 'text':' Download CSV', 'icon': 'fa fa-download'},
+                {'id':4, 'text':'Backtest CSV', 'icon': 'fa fa-download'},
+                {'id':5, 'text':'Go Premium', 'icon': 'fa fa-star', 'actived': true},
+                {'id':6, 'text':'Team Search', 'icon': 'fa fa-shirtsinbulk'},
             ],
 
             head: [
@@ -193,7 +193,9 @@ export default {
     .n-width{
         width: 15%;
     }
-    
+    .list-filt{
+        margin-bottom: 17px;
+    }
     .team-maches {
         width: 320px!important;
     }
