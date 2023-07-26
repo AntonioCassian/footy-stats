@@ -33,6 +33,7 @@ export default{
         font-size: 20px;
         line-height: 19px;
         font-weight: bold;
+        display: inline-block;
     }
 
     .siz >.title[data-v-137f44b8]{
@@ -41,6 +42,13 @@ export default{
     .matches >.title {
         font-size: 24px;
         margin-bottom: 0;
+    }
+
+    .predic > .title {
+        font-size: 23px;
+        margin-bottom: 0;
+        color: #14294a;
+        font-weight: 600;
     }
     .paragraph{
         font-size: 11px;

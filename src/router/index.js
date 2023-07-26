@@ -4,6 +4,7 @@ import Home from '@/views/Home.vue'
 import Stats from '@/views/Stats.vue'
 import Leagues from '@/views/Leagues.vue'
 import Matches from '@/views/Matches.vue'
+import Prediction from '@/views/Prediction.vue'
 
 Vue.use(VueRouter)
 
@@ -27,6 +28,11 @@ const routes = [
     path: '/matches',
     name: 'matches',
     component: Matches
+  },
+  {
+    path: '/predictions/',
+    name: 'predictions',
+    component: Prediction
   },
 ]
 
