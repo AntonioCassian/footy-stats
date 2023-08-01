@@ -1,14 +1,14 @@
 <template>
     <div class="embed">
-        <div class="title">
+        <div class="emb-title">
             <h5>
                 Premium is Here!<br />
                 500+ Great leagues known to be advantageous!
             </h5>
         </div>
-        <p class="text">We've done the research into which leagues have the most winning potential. Plus, you get Corner stats and Card stats along with CSV. Subscribe to FootyStats Premium today!</p>
+        <p class="emb-text">We've done the research into which leagues have the most winning potential. Plus, you get Corner stats and Card stats along with CSV. Subscribe to FootyStats Premium today!</p>
 
-        <p class="text tp">
+        <p class="emb-text tp">
             Michael Owen endorses<br>
             FootyStats Premium
             <i class="fa fa-angle-down" aria-hidden="true"></i>
@@ -37,18 +37,19 @@ export default {
         text-align: center;
         background: #0a71c5;
         color: #fff;
-        padding: 20px 20px 20px 28px;
+        padding: 20px 14px 14px 28px;
         margin-top: 28px;
     }
-    .title {
+    .emb-title > h5{
         font-size: 20px;
-        font-weight: 800;
+        font-weight: bold;
     }
-    .text{
+    .emb-text{
         font-size: 14px;
         line-height: 1.4em;
+        color: #fff;
     }
-    .text > i{
+    .emb-text > i{
         font-weight: 900;
     }
     .tp{
