@@ -24,7 +24,10 @@
                         <TogPred v-for="tab in table.slice(8, 15)" :key="tab.id" :table="table"/>
                     
                     <Video />
-                    <TogPred v-for="tab in table" :key="tab.id" :table="table"/>
+                    <div class="visb">
+                        <TogPred v-for="tab in table" :key="tab.id" :table="table"/>
+                        <Visible />
+                    </div>
                 </main>
 
                 <aside class=" pd-l pd-r">
@@ -57,9 +60,10 @@ import Item from '@/components/Filters/ListItem.vue'
 import TogPred from '@/components/Toggle/Prediction.vue'
 import Card from '@/components/template/NumElem.vue'
 import Video from '@/components/Embed/PredicEmbed.vue'
+import Visible from '@/components/template/Visb.vue'
     export default {
         name: 'Prediction',
-        components: {Header, PageTitle, Title, Item, TogPred, Card, Video},
+        components: {Header, PageTitle, Title, Item, TogPred, Card, Video, Visible},
         data() {
             return {
                 limit: 9,
