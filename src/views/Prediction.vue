@@ -19,6 +19,11 @@
 
                 <main class="pd pd-pred">
                     <Title title="Predictions for Today" />
+                        <TogPred v-for="tab in table.slice(0, 8)" :key="tab.id" :table="table"/>
+                    <div class="pb-3" />
+                        <TogPred v-for="tab in table.slice(8, 15)" :key="tab.id" :table="table"/>
+                    
+                    <Video />
                     <TogPred v-for="tab in table" :key="tab.id" :table="table"/>
                 </main>
 
@@ -36,7 +41,7 @@
                     <Title title="Related Pages" />
 
                     <b-list-group class="list-filt">
-                        <Item v-for="li in pages" :key="li.id" :text="li.text"  />
+                        <Item v-for="li in pages" :key="li.id" :text="li.text" />
                     </b-list-group>
                 </aside>
             </div>
@@ -51,11 +56,13 @@ import Title from '@/components/template/TitleS.vue'
 import Item from '@/components/Filters/ListItem.vue'
 import TogPred from '@/components/Toggle/Prediction.vue'
 import Card from '@/components/template/NumElem.vue'
+import Video from '@/components/Embed/PredicEmbed.vue'
     export default {
         name: 'Prediction',
-        components: {Header, PageTitle, Title, Item, TogPred, Card},
+        components: {Header, PageTitle, Title, Item, TogPred, Card, Video},
         data() {
             return {
+                limit: 9,
                 list: [
                 {'id':0, 'text':'Today', 'icon': 'fa fa-calendar-o'},
                 {'id':1, 'text':'Tomorrow', 'icon': 'fa fa-calendar-o'},
