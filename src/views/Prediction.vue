@@ -22,8 +22,22 @@
                     <TogPred v-for="tab in table" :key="tab.id" :table="table"/>
                 </main>
 
-                <aside>
+                <aside class=" pd-l pd-r">
+                    <Title title="Predictions by League" />
+                    <b-list-group class="list-filt">
+                        <Item v-for="li in league" :key="li.id" :text="li.text" :icon="li.icon" />
+                    </b-list-group>
                     
+                    <Title title="In Numbers" />
+                    <Card num="390" text="Predictions In Last 24 Hours" />
+                    <Card num="568,663" text="Total Predictions Placed" />
+                    <Card num="222,373,655,579" text="Total Coins Spent" />
+
+                    <Title title="Related Pages" />
+
+                    <b-list-group class="list-filt">
+                        <Item v-for="li in pages" :key="li.id" :text="li.text"  />
+                    </b-list-group>
                 </aside>
             </div>
         </div>
@@ -36,9 +50,10 @@ import PageTitle from '@/components/template/PageTitle.vue'
 import Title from '@/components/template/TitleS.vue'
 import Item from '@/components/Filters/ListItem.vue'
 import TogPred from '@/components/Toggle/Prediction.vue'
+import Card from '@/components/template/NumElem.vue'
     export default {
         name: 'Prediction',
-        components: {Header, PageTitle, Title, Item, TogPred},
+        components: {Header, PageTitle, Title, Item, TogPred, Card},
         data() {
             return {
                 list: [
@@ -66,6 +81,23 @@ import TogPred from '@/components/Toggle/Prediction.vue'
                 {'id': 3, 'times': 'TPS vs SJK Akatemia' ,'market': 'Home Win', 'odds': 1.63, 'data': '29th July at 07:15pm', 'competion': 'Úrvalsdeild', 'coins': 1000, 'winHom': '71%', 'winFor': '0%', 'pgHom': 2.29, 'pgFor': 0.29, 'scoredHom': 3, 'scoredFor': 0.71},
                 {'id': 4, 'times': 'TPS vs SJK Akatemia' ,'market': 'Home Win', 'odds': 1.63, 'data': '29th July at 07:15pm', 'competion': 'Úrvalsdeild', 'coins': 1000, 'winHom': '71%', 'winFor': '0%', 'pgHom': 2.29, 'pgFor': 0.29, 'scoredHom': 3, 'scoredFor': 0.71},
                 {'id': 5, 'times': 'TPS vs SJK Akatemia' ,'market': 'Home Win', 'odds': 1.63, 'data': '29th July at 07:15pm', 'competion': 'Úrvalsdeild', 'coins': 1000, 'winHom': '71%', 'winFor': '0%', 'pgHom': 2.29, 'pgFor': 0.29, 'scoredHom': 3, 'scoredFor': 0.71},
+            ],
+
+            league: [
+                {'id': 0, 'icon': 'fa fa-window-close', 'text': ' Premier League Predictions'},
+                {'id': 1, 'icon': 'fa fa-window-close', 'text': ' La Liga Predictions'},
+                {'id': 2, 'icon': 'fa fa-window-close', 'text': ' Bundesliga Predictions'},
+                {'id': 3, 'icon': 'fa fa-window-close', 'text': ' Serie A Predictions'},
+                {'id': 4, 'icon': 'fa fa-window-close', 'text': ' MLS Predictions'},
+            ],
+            pages: [
+                {'id': 0, 'text':'Football Tips'},
+                {'id': 0, 'text':'BTTS Tips'},
+                {'id': 0, 'text':'Corner Tips'},
+                {'id': 0, 'text':'+2.5 Goals Tips'},
+                {'id': 0, 'text':'Form Guide'},
+                {'id': 0, 'text':'Team Search'},
+                {'id': 0, 'text':'Match Search'}
             ]
             }
         }
@@ -79,6 +111,9 @@ import TogPred from '@/components/Toggle/Prediction.vue'
     }
     .pd-pred {
         width: 50%;
+        margin-right: 20px;
     }
-    
+    .pd-r{
+        width: 25%;
+    }
 </style>
