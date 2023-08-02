@@ -24,10 +24,10 @@
                         <TogPred v-for="tab in table.slice(8, 15)" :key="tab.id" :table="table"/>
                     
                     <Video />
-                    <div class="visb">
-                        <TogPred v-for="tab in table" :key="tab.id" :table="table"/>
-                        <Visible />
-                    </div>
+                        <TogPred v-for="tab in table" :key="tab.id" :table="table" :visib="tab.vs"/>
+                        <div class="vis">
+                            <Visible />
+                        </div>
                 </main>
 
                 <aside class=" pd-l pd-r">
@@ -102,12 +102,12 @@ import Visible from '@/components/template/Visb.vue'
                 {'id': 13, 'times': 'TPS vs SJK Akatemia' ,'market': 'Home Win', 'odds': 1.63, 'data': '29th July at 07:15pm', 'competion': 'Úrvalsdeild', 'coins': 1000, 'winHom': '71%', 'winFor': '0%', 'pgHom': 2.29, 'pgFor': 0.29, 'scoredHom': 3, 'scoredFor': 0.71},
                 {'id': 14, 'times': 'TPS vs SJK Akatemia' ,'market': 'Home Win', 'odds': 1.63, 'data': '29th July at 07:15pm', 'competion': 'Úrvalsdeild', 'coins': 1000, 'winHom': '71%', 'winFor': '0%', 'pgHom': 2.29, 'pgFor': 0.29, 'scoredHom': 3, 'scoredFor': 0.71},
                 {'id': 15, 'times': 'TPS vs SJK Akatemia' ,'market': 'Home Win', 'odds': 1.63, 'data': '29th July at 07:15pm', 'competion': 'Úrvalsdeild', 'coins': 1000, 'winHom': '71%', 'winFor': '0%', 'pgHom': 2.29, 'pgFor': 0.29, 'scoredHom': 3, 'scoredFor': 0.71},
-                {'id': 16, 'times': 'TPS vs SJK Akatemia' ,'market': 'Home Win', 'odds': 1.63, 'data': '29th July at 07:15pm', 'competion': 'Úrvalsdeild', 'coins': 1000, 'winHom': '71%', 'winFor': '0%', 'pgHom': 2.29, 'pgFor': 0.29, 'scoredHom': 3, 'scoredFor': 0.71},
-                {'id': 17, 'times': 'TPS vs SJK Akatemia' ,'market': 'Home Win', 'odds': 1.63, 'data': '29th July at 07:15pm', 'competion': 'Úrvalsdeild', 'coins': 1000, 'winHom': '71%', 'winFor': '0%', 'pgHom': 2.29, 'pgFor': 0.29, 'scoredHom': 3, 'scoredFor': 0.71},
-                {'id': 18, 'times': 'TPS vs SJK Akatemia' ,'market': 'Home Win', 'odds': 1.63, 'data': '29th July at 07:15pm', 'competion': 'Úrvalsdeild', 'coins': 1000, 'winHom': '71%', 'winFor': '0%', 'pgHom': 2.29, 'pgFor': 0.29, 'scoredHom': 3, 'scoredFor': 0.71},
-                {'id': 19, 'times': 'TPS vs SJK Akatemia' ,'market': 'Home Win', 'odds': 1.63, 'data': '29th July at 07:15pm', 'competion': 'Úrvalsdeild', 'coins': 1000, 'winHom': '71%', 'winFor': '0%', 'pgHom': 2.29, 'pgFor': 0.29, 'scoredHom': 3, 'scoredFor': 0.71},
-                {'id': 20, 'times': 'TPS vs SJK Akatemia' ,'market': 'Home Win', 'odds': 1.63, 'data': '29th July at 07:15pm', 'competion': 'Úrvalsdeild', 'coins': 1000, 'winHom': '71%', 'winFor': '0%', 'pgHom': 2.29, 'pgFor': 0.29, 'scoredHom': 3, 'scoredFor': 0.71},
-                {'id': 21, 'times': 'TPS vs SJK Akatemia' ,'market': 'Home Win', 'odds': 1.63, 'data': '29th July at 07:15pm', 'competion': 'Úrvalsdeild', 'coins': 1000, 'winHom': '71%', 'winFor': '0%', 'pgHom': 2.29, 'pgFor': 0.29, 'scoredHom': 3, 'scoredFor': 0.71},
+                {'id': 16, 'times': 'TPS vs SJK Akatemia' ,'market': 'Home Win', 'odds': 1.63, 'data': '29th July at 07:15pm', 'competion': 'Úrvalsdeild', 'coins': 1000, 'winHom': '71%', 'winFor': '0%', 'pgHom': 2.29, 'pgFor': 0.29, 'scoredHom': 3, 'scoredFor': 0.71, 'vs': 'filter:blur(4px)'},
+                {'id': 17, 'times': 'TPS vs SJK Akatemia' ,'market': 'Home Win', 'odds': 1.63, 'data': '29th July at 07:15pm', 'competion': 'Úrvalsdeild', 'coins': 1000, 'winHom': '71%', 'winFor': '0%', 'pgHom': 2.29, 'pgFor': 0.29, 'scoredHom': 3, 'scoredFor': 0.71, 'vs': 'filter:blur(4px)'},
+                {'id': 18, 'times': 'TPS vs SJK Akatemia' ,'market': 'Home Win', 'odds': 1.63, 'data': '29th July at 07:15pm', 'competion': 'Úrvalsdeild', 'coins': 1000, 'winHom': '71%', 'winFor': '0%', 'pgHom': 2.29, 'pgFor': 0.29, 'scoredHom': 3, 'scoredFor': 0.71, 'vs': 'filter:blur(4px)'},
+                {'id': 19, 'times': 'TPS vs SJK Akatemia' ,'market': 'Home Win', 'odds': 1.63, 'data': '29th July at 07:15pm', 'competion': 'Úrvalsdeild', 'coins': 1000, 'winHom': '71%', 'winFor': '0%', 'pgHom': 2.29, 'pgFor': 0.29, 'scoredHom': 3, 'scoredFor': 0.71, 'vs': 'filter:blur(4px)'},
+                {'id': 20, 'times': 'TPS vs SJK Akatemia' ,'market': 'Home Win', 'odds': 1.63, 'data': '29th July at 07:15pm', 'competion': 'Úrvalsdeild', 'coins': 1000, 'winHom': '71%', 'winFor': '0%', 'pgHom': 2.29, 'pgFor': 0.29, 'scoredHom': 3, 'scoredFor': 0.71, 'vs': 'filter:blur(4px)'},
+                {'id': 21, 'times': 'TPS vs SJK Akatemia' ,'market': 'Home Win', 'odds': 1.63, 'data': '29th July at 07:15pm', 'competion': 'Úrvalsdeild', 'coins': 1000, 'winHom': '71%', 'winFor': '0%', 'pgHom': 2.29, 'pgFor': 0.29, 'scoredHom': 3, 'scoredFor': 0.71, 'vs': 'filter:blur(4px)'}
             ],
 
             league: [
@@ -142,5 +142,8 @@ import Visible from '@/components/template/Visb.vue'
     }
     .pd-r{
         width: 25%;
+    }
+    .filt {
+        filter: blur(4px);
     }
 </style>

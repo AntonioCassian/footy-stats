@@ -1,5 +1,5 @@
 <template>
-    <div class="wrapper-tog">
+    <div class="wrapper-tog" :style="table.visib">
         <div class="click-tog" @click="tog" :class="{activ: toggle}">
             <div class="pred-tit" :class="{activ: toggle}">
                 <i class="fa fa-window-close ic"></i>
@@ -36,10 +36,11 @@ import List from '@/components/Lista/ListPred.vue'
 export default {
     name: 'Prediction',
     components: {List},
-    props: {table: Object},
+    props: ['table', 'visib'],
     data () {
         return {
-            toggle: false
+            toggle: false,
+            fil: true
         }
     },
     computed: {
@@ -47,6 +48,9 @@ export default {
             if(this.toggle == true) {
                 return this.active
             }
+        },
+        style() {
+            return this.visib === this.fil
         }
     },
     methods: {
@@ -127,5 +131,8 @@ export default {
     .activ {
         background: #16284c;
         color: #fff!important;
+    }
+    .filt {
+        filter: blur(4px);
     }
 </style>

@@ -1,5 +1,5 @@
 <template>
-    <div  class="mr-2" :style="'width: '+this.width">
+    <div  class="mr-2" :style="style">
             <div class="head-tab alt" >
                 {{ head }}
             </div>
@@ -10,7 +10,7 @@
 export default {
     name: 'headTab',
     props: ['head', 'width'],
-    somputed: {
+    computed: {
         style() {
             return "width: " + (this.width || "80px")
         }
