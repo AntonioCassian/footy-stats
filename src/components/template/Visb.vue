@@ -1,5 +1,5 @@
 <template>
-    <div class="p-3">
+    <div class="visi p-3">
         <div class="cadd-pred">
             <h3 class="title">See 100+ More Predictions!</h3>
             <p class="des">Register a free account to see more predictions and stats</p>
@@ -9,6 +9,10 @@
 </template>
 
 <style scoped>
+    .visi {
+        position: absolute;
+        z-index: 20;
+    }
     .cadd-pred {
         background: #15274c;
         padding: 30px;
