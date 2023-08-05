@@ -5,6 +5,7 @@ import Stats from '@/views/Stats.vue'
 import Leagues from '@/views/Leagues.vue'
 import Matches from '@/views/Matches.vue'
 import Prediction from '@/views/Prediction.vue'
+import Login from '@/views/Login.vue'
 
 Vue.use(VueRouter)
 
@@ -34,6 +35,11 @@ const routes = [
     name: 'predictions',
     component: Prediction
   },
+  {
+    path: '/login',
+    name: 'login',
+    component: Login
+  }
 ]
 
 const router = new VueRouter({

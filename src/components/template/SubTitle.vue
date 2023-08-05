@@ -1,5 +1,5 @@
 <template>
-    <div class="subtitle">
+    <div class="subtitle log">
         <h2 v-if="!this.sub == ''" class="sub">{{ sub }}</h2>
         <p>{{ paragraph }}</p>
     </div>
@@ -22,5 +22,9 @@ export default {
         line-height: 19px;
         text-align: left;
         font-size: 13px;
+    }
+
+    .log > h2{
+        font-size: 23px;
     }
 </style>

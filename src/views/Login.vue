@@ -1,15 +1,188 @@
 <template>
     <div class="login">
-        <div class="tit-login">
-            <SubTitle sub="Login" paragraph="Welcome back. Login using your user and password to access amazing features."/>
+        <Header />
+        <div class="area-log">
+            <b-container>
+                <b-row class="justify-content-center" align-v="center">
+                    <b-col col md="5" sm="12" class="centered" >
+                        <div class="wrapper-form">
+                            <div class="form-head">
+                                <SubTitle class="log" sub="Login" paragraph="Welcome back. Login using your user and password to access amazing features."/>
+                            </div>
+                            <form>
+                                <div class="bod">
+                                    <div class="feed-form">
+                                        <span class="fa fa-user icon" aria-hidden="true"></span>
+                                        <input type="email" placeholder="Email or Username" v-model="email"/>
+                                    </div>
+                                    <div class="feed-form fin">
+                                        <span class="fa fa-user icon" aria-hidden="true"></span>
+                                        <input type="email" v-model="email"/>
+                                    </div>
+                                </div>
+
+                                <div class="foot">
+                                    <button class="submit-form">
+                                        Login
+                                    </button>
+                                    <p class="text-center mb-0">or</p>
+                                    <div class="foot-icons">
+                                        <div class="feed-form foot-face">
+                                            <a href="" class="li-ft">
+                                                <i class="fa fa-facebook-official ic" aria-hidden="true"></i>
+                                                <span class="txt">Log in With Facebook</span>
+                                            </a>
+                                        </div>
+                                        <div class="feed-form foot-twt">
+                                            <a href="" class="li-twt">
+                                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                                                <span class="txt twt">Log in With Twitter</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="links-form">
+                                        <a href="" class="reg">
+                                            Don't have an account? Register! 
+                                            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+
+                                    <div class="links-form lastf">
+                                        <a href="" class="reg">
+                                            Forgot Password? Reset it 
+                                            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </b-col>
+                </b-row>        
+            </b-container>
         </div>
     </div>
 </template>
 
 <script>
+import Header from '@/components/template/Header.vue'
 import SubTitle from '@/components/template/SubTitle.vue'
 export default {
     name: 'Login',
-    components: {SubTitle}
+    components: {SubTitle, Header}
 }
 </script>
+
+<style>
+    .area-log {
+        background: #171717 url('../assets/backg.jpg');
+        background-size: cover;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+    }
+    .wrapper-form {
+        background: #fff;
+        border-radius: 4px;
+        margin: 110px 0 100px;
+    }
+    .form-head{
+        border-radius: 4px 4px 0 0;
+        padding: 32px;
+    }
+    .bod{
+        padding: 32px;
+        background: #f3f3f3;
+        border-top: 1px solid #e4e4e4;
+    }
+    .feed-form {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    .icon{
+        font-size: 16px;
+        margin-right: 14px;
+        flex-basis: 22px;
+        text-align: center;
+        color: #1f406b;
+    }
+    .feed-form > input {
+        flex: 1;
+        width: 80%;
+        font-size: 14px;
+        height: 34px;
+        line-height: normal;
+        padding: 1px 2px 1px 10px;
+    }
+    .fin{
+        margin-bottom: 0;
+    }
+
+    .foot{
+        padding: 16px; 
+        border-top: 1px solid #e4e4e4;
+        border-radius: 0 0 4px 4px;
+    }
+    .submit-form {
+        width: 100%;
+        padding: 0.5em 0;
+        text-align: center;
+        font-size: 1.4em;
+        text-transform: uppercase;
+        cursor: pointer;
+        background: #27ae60;
+        color: #fff;
+        font-weight: 600;
+        border: none;
+        border-radius: 4px;
+    }
+    .submit-form:hover {
+        opacity: 0.8;
+    }
+    .foot-face{
+        background: #1877f2;
+        color: #fff;
+        padding: 8px;
+    }
+    .li-ft {
+        color: #fff;
+        text-decoration: none;
+    }
+    .ic {
+        font-size: 24px;
+        flex-basis: 24px;
+    }
+    .txt{
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .foot-twt {
+        background: #31a1e6;
+        padding: 8px;
+    }
+    .li-twt {
+        color: #fff;
+        text-decoration: none;
+    }
+    .twt:hover{
+        text-decoration: underline;
+    }
+
+    .links-form{
+        color: #0066c0;
+        text-align: center;
+        font-size: 13px;
+        margin: 25px 0 12px;
+    }
+    .reg{
+        text-decoration: none;
+        font-weight: 600;
+    }
+    .reg:hover{
+        text-decoration: underline;   
+    }
+    .lastf{
+        margin-top: 7px;
+    }
+</style>
