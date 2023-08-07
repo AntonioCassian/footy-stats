@@ -11,20 +11,11 @@
                             </div>
                             <form>
                                 <div class="bod">
-                                    <div class="feed-form">
-                                        <span class="fa fa-user icon" aria-hidden="true"></span>
-                                        <input type="email" placeholder="Email or Username" v-model="email"/>
-                                    </div>
-                                    <div class="feed-form fin">
-                                        <span class="fa fa-user icon" aria-hidden="true"></span>
-                                        <input type="email" v-model="email"/>
-                                    </div>
+                                    <Input icon="fa fa-user" type="email" place="Email or Username" :model="user.email"/>
+                                    <Input icon="fa fa-lock" type="password" place="Password" :model="user.senha" />
                                 </div>
-
                                 <div class="foot">
-                                    <button class="submit-form">
-                                        Login
-                                    </button>
+                                    <Button text="Login" type="submit"/>
                                     <p class="text-center mb-0">or</p>
                                     <div class="foot-icons">
                                         <div class="feed-form foot-face">
@@ -40,22 +31,10 @@
                                             </a>
                                         </div>
                                     </div>
-                                
-                                    <div class="links-form">
-                                        <a href="" class="reg">
-                                            Don't have an account? Register! 
-                                            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                                        </a>
-                                    </div>
 
-                                    <div class="links-form lastf">
-                                        <a href="" class="reg">
-                                            Forgot Password? Reset it 
-                                            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                                        </a>
-                                    </div>
+                                    <Link text="Don't have an account? Register!  "/>
+                                    <Link text="Forgot Password? Reset it  " class="lastf"/>
                                 </div>
-
                             </form>
                         </div>
                     </b-col>
@@ -68,9 +47,20 @@
 <script>
 import Header from '@/components/template/Header.vue'
 import SubTitle from '@/components/template/SubTitle.vue'
+import Input from '@/components/Form/Input.vue'
+import Button from '@/components/Form/Button.vue'
+import Link from '@/components/Form/Link.vue'
 export default {
     name: 'Login',
-    components: {SubTitle, Header}
+    components: {SubTitle, Header, Input, Button, Link},
+    data(){
+        return {
+            user: {
+                email: '',
+                senha: ''
+            }
+        }
+    }
 }
 </script>
 
@@ -88,10 +78,10 @@ export default {
     }
     .form-head{
         border-radius: 4px 4px 0 0;
-        padding: 32px;
+        padding: 30px;
     }
     .bod{
-        padding: 32px;
+        padding: 30px;
         background: #f3f3f3;
         border-top: 1px solid #e4e4e4;
     }
@@ -124,22 +114,7 @@ export default {
         border-top: 1px solid #e4e4e4;
         border-radius: 0 0 4px 4px;
     }
-    .submit-form {
-        width: 100%;
-        padding: 0.5em 0;
-        text-align: center;
-        font-size: 1.4em;
-        text-transform: uppercase;
-        cursor: pointer;
-        background: #27ae60;
-        color: #fff;
-        font-weight: 600;
-        border: none;
-        border-radius: 4px;
-    }
-    .submit-form:hover {
-        opacity: 0.8;
-    }
+    
     .foot-face{
         background: #1877f2;
         color: #fff;
@@ -169,20 +144,8 @@ export default {
         text-decoration: underline;
     }
 
-    .links-form{
-        color: #0066c0;
-        text-align: center;
-        font-size: 13px;
-        margin: 25px 0 12px;
-    }
-    .reg{
-        text-decoration: none;
-        font-weight: 600;
-    }
-    .reg:hover{
-        text-decoration: underline;   
-    }
-    .lastf{
-        margin-top: 7px;
+    
+    .lastf[data-v-072bf005]{
+        margin: 7px 0 12px;
     }
 </style>
