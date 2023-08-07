@@ -6,6 +6,7 @@ import Leagues from '@/views/Leagues.vue'
 import Matches from '@/views/Matches.vue'
 import Prediction from '@/views/Prediction.vue'
 import Login from '@/views/Login.vue'
+import Register from '@/views/Register.vue'
 
 Vue.use(VueRouter)
 
@@ -39,6 +40,11 @@ const routes = [
     path: '/login',
     name: 'login',
     component: Login
+  },
+  {
+    path: '/register',
+    name: 'registe',
+    component: Register
   }
 ]
 

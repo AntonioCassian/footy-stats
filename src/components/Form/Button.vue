@@ -17,7 +17,7 @@ export default{
         width: 100%;
         padding: 0.5em 0;
         text-align: center;
-        font-size: 1.4em;
+        font-size: 20px;
         text-transform: uppercase;
         cursor: pointer;
         background: #27ae60;
@@ -28,5 +28,11 @@ export default{
     }
     .submit-form:hover {
         opacity: 0.8;
+    }
+
+    .submit-form > i {
+        font-size: 14px;
+        padding-left: 20px;
+        font-weight: 900;
     }
 </style>

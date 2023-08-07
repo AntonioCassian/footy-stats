@@ -1,5 +1,5 @@
 <template>
-    <div class="links-form lastf">
+    <div class="links-form">
         <a href="" class="reg">
             {{text}}  
             <i class="fa fa-angle-double-right" aria-hidden="true"></i>

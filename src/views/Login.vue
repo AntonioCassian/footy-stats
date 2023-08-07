@@ -119,6 +119,7 @@ export default {
         background: #1877f2;
         color: #fff;
         padding: 8px;
+        border-radius: 4px;
     }
     .li-ft {
         color: #fff;
@@ -135,6 +136,7 @@ export default {
     .foot-twt {
         background: #31a1e6;
         padding: 8px;
+        border-radius: 4px;
     }
     .li-twt {
         color: #fff;
