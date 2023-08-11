@@ -1,7 +1,7 @@
 <template>
     <div class="PageTitle">
         <h1 class="title" v-if="!title == ''">{{ title }}</h1>
-        <p v-if="!this.paragraph == ''" class="paragraph">{{ paragraph }}</p>
+        <p v-if="!this.paragraph == ''" class="paragraph">{{ paragraph }} <a href="">{{ link }}</a> {{ res }}</p>
     </div>
 </template>
 
@@ -11,7 +11,9 @@ export default{
     props:{ 
         'title': {String},
         'paragraph': {String},
-        'sub': {String, Boolean}
+        'sub': {String, Boolean},
+        'link': {String},
+        'res': {String}
     },
     computed: {
         subC() {
@@ -52,9 +54,13 @@ export default{
     }
     .paragraph{
         font-size: 11px;
+        margin: 0;
     }
     
-    p{
-        margin: 0
+    .paragraph > a{
+        text-decoration: none;
+    }
+    .paragraph > a:hover{
+        text-decoration: underline;
     }
 </style>

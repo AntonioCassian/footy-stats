@@ -7,7 +7,10 @@
                     <div class="min-container d-flex">
                         <b-col cols="8">
                             <PageTitle title="Football Stats, Tables and Results"
-                                paragraph="FootyStats is the premier football stats and analysis site, with data coverage in 1500+ football leagues worldwide including UK, Europe, and South America. We also cover <a>football livescores</a>.' Team stats, League stats, and Player stats are covered with details on form, goals scored, conceded, shots, xG, corner stats, and more. You can also download the data using our CSV or API service."
+                                paragraph="FootyStats is the premier football stats and analysis site, with data coverage in 1500+ football leagues worldwide including UK, Europe, and South America. We also cover " 
+                                link="football livescores" 
+                                res=". Team stats, League stats, and Player stats are covered with details on form, goals scored, conceded, shots, xG, corner stats, and more. You can also download the data using our CSV or API service."
+                                  
                             />
                             <hr />
 
@@ -16,7 +19,7 @@
 
                             <TabTitle title="Stats For Football Fixtures" color="#303D52" normal="normal"/>
 
-                            <Table />
+                            <Table pais="South America" campeonato="Copa Sudamericana"/>
 
                             <SubTitle title="Player Statistics" color="#0066c0" link="link" icon="fa fa-angle-double-right"/>
 
@@ -67,7 +70,7 @@ import PageTitle from '@/components/template/PageTitle.vue'
 import Nav from '@/components/template/Nav.vue'
 import NavSecund from '@/components/template/NavSecund.vue'
 import TabTitle from '@/components/Table/SubTitle.vue'
-import Table from '@/components/Table/Table.vue'
+import Table from '@/components/Table/TabTitle.vue'
 import Statics from '@/components/Statics/PlayerStatics.vue'
 import TeamList from '@/components/Statics/TeamStatics.vue'
 import Perguntas from '@/components/Statics/Perguntas.vue'

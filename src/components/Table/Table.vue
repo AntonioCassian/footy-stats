@@ -171,7 +171,7 @@
 </template>
 
 <script>
-import TableTitle from './TableTitle.vue';
+import TableTitle from './TabTitle.vue';
 import Tooltip from '../Tooltip/Tooltip.vue'
 import TSmall from '../Tooltip/TolltipSmall.vue'
 export default {

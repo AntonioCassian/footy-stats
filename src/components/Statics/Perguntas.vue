@@ -114,7 +114,7 @@
             </div>
         </div>
     </div>
-    <div class="perguntas per-simp">
+    <div class="perguntas per-simp mt-5">
         <div class="title">
             <h2>Football Stats by FootyStats</h2>
         </div>
