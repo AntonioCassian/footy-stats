@@ -52,7 +52,7 @@
 </template>
 
 <script>
-import Header from '@/components/template/Header.vue'
+import Header from '@/components/Header/Header.vue'
 import PageTitle from '@/components/template/PageTitle.vue'
 import List from '@/components/Filters/ListLeft.vue'
 import ItemTog from '@/components/Toggle/ItemTog.vue'

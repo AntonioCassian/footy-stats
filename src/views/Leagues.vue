@@ -41,7 +41,7 @@
 </template>
 
 <script>
-import Header from '@/components/template/Header.vue'
+import Header from '@/components/Header/Header.vue'
 import PageTitle from '@/components/template/PageTitle.vue'
 import TeamHeader from '@/components/TabL/TeamHeader.vue'
 import Item from '@/components/Filters/ListItem.vue'

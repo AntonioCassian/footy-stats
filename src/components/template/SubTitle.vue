@@ -1,5 +1,5 @@
 <template>
-    <div class="subtitle log">
+    <div class="subtitle">
         <h2 v-if="!this.sub == ''" class="sub">{{ sub }}</h2>
         <p>{{ paragraph }}</p>
     </div>

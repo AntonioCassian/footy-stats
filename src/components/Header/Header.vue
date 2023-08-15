@@ -11,31 +11,45 @@
                     <Search />
                 </li>
               
-                
+        
                 <li class="navItem right">
                     <Link icon="fa fa-sign-in" text="Login"/>
+                    <div class="drop lg">
+                        <Login />
+                    </div>
                 </li>
-                
-                
                 
                 <li class="navItem right">
                     <Link  text="More" icon="fa fa-caret-down"/>
+                    <div class="drop p-lef">
+                        <More />
+                    </div>
                 </li>
                 
                 <li class="navItem right">
                     <Link text="Predictions"/>
                 </li>
+
                 <li class="navItem right">
                     <Link icon="fa fa-calendar" text="Matches"/>
                 </li>
-                <li class="navItem right">
+                
+                <li class="navItem navL right">
                     <Link icon="fa fa-futbol-o" text="Leagues"/>
+                    <div class="drop-leag w-100">
+                        <League />
+                    </div>
                 </li>
-                <li class="navItem right">
+                
+                <li class="navItem right dr">
                     <Link icon="fa fa-area-chart" text="Stats"/>
+                    <div class="drop">
+                        <Stats class="st" />
+                    </div>
                 </li>
+
                 <li class="navItem right">
-                    <Link icon="fa fa-twitter"/>
+                    <Link class="noHover tw" icon="fa fa-twitter"/>
                 </li>
             </ul>
         </div>
@@ -43,12 +57,15 @@
 </template>
 
 <script>
-import Search from './Search.vue'
-import Link from './Link.vue'
-
+import Search from '../template/Search.vue'
+import Stats from './Stats.vue'
+import League from './League.vue'
+import Link from '../Lista/Link.vue'
+import More from './More.vue'
+import Login from './Login.vue'
 export default {
     name: 'Header',
-    components: {Search, Link}
+    components: {Search, Link, Stats, League, More, Login}
 }
 </script>
 
@@ -57,6 +74,9 @@ export default {
     background: #222;
     height: 44px;
     width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 10;
 }
 
 .container-cab {
@@ -65,16 +85,22 @@ export default {
 
 .navLista{
     display: inline-block;
-    line-height: 44px;
     margin-bottom: 0;
     padding: 0;
     width: 100%
 }
 
 .navItem{
-    padding: 0 6px;
+    padding: 0 1px;
     cursor: pointer;
+    line-height: 44px;
+    position: relative;
 }
+
+.navItem:hover .drop {
+    display: block;
+}
+
 
 .logo img{
     height: 30px;
@@ -93,5 +119,50 @@ export default {
 }
 .right {
     float: right;
+}
+.noHover{
+    pointer-events: none;
+}
+.tw > i{
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.drop{
+    position: absolute;
+    background: #444;
+    margin-top: -1px;
+    z-index: 100;
+    display: none;
+    left: 0;
+}
+
+.st{
+    width: 180px;
+}
+
+.drop-leag{
+    position: fixed;
+    left: 0;
+    height: 493px;
+    background: #383838 !important;
+    overflow: hidden;
+    opacity: 1 !important;
+    margin-top: -1px;
+    cursor: default;
+    display: none;
+}
+.navL:hover .drop-leag {
+    display: block;
+}
+
+.p-lef{
+    width: 430px;
+    left: -188px;
+    box-shadow: inset 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
+}
+.lg {
+    width: 170px;
+    left: -80px;
 }
 </style>

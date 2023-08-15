@@ -45,7 +45,7 @@
 </template>
 
 <script>
-import Header from '@/components/template/Header.vue'
+import Header from '@/components/Header/Header.vue'
 import SubTitle from '@/components/template/SubTitle.vue'
 import Input from '@/components/Form/Input.vue'
 import Button from '@/components/Form/Button.vue'

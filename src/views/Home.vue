@@ -65,7 +65,7 @@
 </template>
 
 <script>
-import Header from '@/components/template/Header'
+import Header from '@/components/Header/Header'
 import PageTitle from '@/components/template/PageTitle.vue'
 import Nav from '@/components/template/Nav.vue'
 import NavSecund from '@/components/template/NavSecund.vue'
@@ -90,7 +90,7 @@ export default {
 
 <style scoped>
     .content{
-        padding-top: 16px;
+        padding-top: 60px;
     }
     .min-container{
         padding: 0 60px;
