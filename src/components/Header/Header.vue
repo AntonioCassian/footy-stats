@@ -4,7 +4,7 @@
             <ul class="navLista">
                 <li class="navItem left">
                     <div class="logo">
-                        <img src="../../assets/logo.webp" />
+                        <router-link to="/"><img src="../../assets/logo.webp" /></router-link>
                     </div>
                 </li>
                 <li class="navItem left">
@@ -13,7 +13,7 @@
               
         
                 <li class="navItem right">
-                    <Link icon="fa fa-sign-in" text="Login"/>
+                    <Link to="/login" icon="fa fa-sign-in" text="Login"/>
                     <div class="drop lg">
                         <Login />
                     </div>
@@ -27,29 +27,31 @@
                 </li>
                 
                 <li class="navItem right">
-                    <Link text="Predictions"/>
+                    <Link to="/predictions/" text="Predictions"/>
                 </li>
 
                 <li class="navItem right">
-                    <Link icon="fa fa-calendar" text="Matches"/>
+                    <Link to="/matches" icon="fa fa-calendar" text="Matches"/>
                 </li>
                 
                 <li class="navItem navL right">
-                    <Link icon="fa fa-futbol-o" text="Leagues"/>
+                    <Link to="/leagues" icon="fa fa-futbol-o" text="Leagues"/>
                     <div class="drop-leag w-100">
                         <League />
                     </div>
                 </li>
                 
                 <li class="navItem right dr">
-                    <Link icon="fa fa-area-chart" text="Stats"/>
+                    <Link to="/stats" icon="fa fa-area-chart" text="Stats"/>
                     <div class="drop">
                         <Stats class="st" />
                     </div>
                 </li>
 
                 <li class="navItem right">
-                    <Link class="noHover tw" icon="fa fa-twitter"/>
+                    <a class="lin tw" href="https://twitter.com/footystats_org" target="_blank">
+                        <i class="fa fa-twitter"></i>
+                    </a>
                 </li>
             </ul>
         </div>

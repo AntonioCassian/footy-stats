@@ -1,23 +1,31 @@
 <template>
-    <a class="link">
+    <router-link  :to="to" class="link">
         <i v-if="icon" :class="icon"></i>
         <span v-if="text">{{ text }}</span>
-    </a>
+    </router-link>
 </template>
 
 <script>
 export default{
     name:'LinkHeader',
-    props: ['icon', 'text', 'revert'],
+    props: {
+        icon: {String},
+        text: {String},
+        to: {String}, 
+        href: {String}
+    },
     computed:{}
 }
 </script>
 
 <style>
-    .link{
+    .link, .lin{
         padding: 10px 8px;
         text-decoration: none;
         font-weight: 600;
+    }
+    .lin{
+        color: #fff;
     }
     .link:hover {
         background: rgba(255, 255, 255, 0.1);
