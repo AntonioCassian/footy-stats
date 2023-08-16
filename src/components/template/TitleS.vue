@@ -2,12 +2,13 @@
     <div class="small title">
         <i v-if="icon" :class="icon"></i> 
         {{ title }}
+        <p v-if="paragrap">{{ paragrap }}</p>
     </div>
 </template>
 
 <script>
 export default {
-    props: ['title', 'icon']
+    props: ['title', 'icon', 'paragrap']
 }
 </script>
 

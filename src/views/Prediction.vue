@@ -50,6 +50,7 @@
                 </aside>
             </div>
         </div>
+        <Footer />
     </div>
 </template>
 
@@ -62,9 +63,10 @@ import TogPred from '@/components/Toggle/Prediction.vue'
 import Card from '@/components/template/NumElem.vue'
 import Video from '@/components/Embed/PredicEmbed.vue'
 import Visible from '@/components/template/Visb.vue'
+import Footer from '@/components/Footer/Footer.vue'
     export default {
         name: 'Prediction',
-        components: {Header, PageTitle, Title, Item, TogPred, Card, Video, Visible},
+        components: {Header, PageTitle, Title, Item, TogPred, Card, Video, Visible, Footer},
         data() {
             return {
                 limit: 9,

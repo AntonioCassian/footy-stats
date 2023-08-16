@@ -1,5 +1,5 @@
 <template>
-    <li class="item-cab">
+    <li>
         <a class="link-drop">
             <i v-if="icon" :class="icon"></i>
             {{text}}

@@ -37,6 +37,7 @@
                 </main>
             </div>
         </div>
+        <Footer />
     </div>
 </template>
 
@@ -48,9 +49,10 @@ import Item from '@/components/Filters/ListItem.vue'
 import ItHead from '@/components/TabL/ItHead.vue'
 import Title from '@/components/template/TitleS.vue'
 import Country from '@/components/TabL/Item.vue'
+import Footer from '@/components/Footer/Footer.vue'
 export default {
     name: "Leagues",
-    components: {Header, PageTitle, Title, Item, TeamHeader, ItHead, Country},
+    components: {Header, PageTitle, Title, Item, TeamHeader, ItHead, Country, Footer},
     data(){
         return {
             list: [

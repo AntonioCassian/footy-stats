@@ -47,6 +47,7 @@
             </main>
             </div>
         </div>
+        <Footer />
     </div>
     
 </template>
@@ -57,9 +58,10 @@ import PageTitle from '@/components/template/PageTitle.vue'
 import List from '@/components/Filters/ListLeft.vue'
 import ItemTog from '@/components/Toggle/ItemTog.vue'
 import Title from '@/components/template/TitleS.vue'
+import Footer from '@/components/Footer/Footer.vue'
 export default {
     name:'Stats',
-    components: {Header, PageTitle, List, ItemTog, Title}
+    components: {Header, PageTitle, List, ItemTog, Title, Footer}
 }
 </script>
 

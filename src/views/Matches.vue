@@ -50,6 +50,7 @@
                 </main>
             </div>
         </div>
+        <Footer />
     </div>
 </template>
 
@@ -65,9 +66,10 @@ import Match from '@/components/TabL/Match.vue'
 import Profit from '@/components/TabL/Profit/Profit.vue'
 import Sidebar from '@/components/template/Sidebar.vue'
 import Modal from '@/components/template/Modal.vue'
+import Footer from '@/components/Footer/Footer.vue'
 export default {
     name: "Leagues",
-    components: {Header, PageTitle, Title, Item, Form, TeamHeader, ItHead, Match, Profit, Sidebar, Modal},
+    components: {Header, PageTitle, Title, Item, Form, TeamHeader, ItHead, Match, Profit, Sidebar, Modal, Footer},
     data(){
         return {
             open: false,

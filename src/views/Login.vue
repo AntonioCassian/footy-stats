@@ -41,6 +41,7 @@
                 </b-row>        
             </b-container>
         </div>
+        <Footer />
     </div>
 </template>
 
@@ -50,9 +51,10 @@ import SubTitle from '@/components/template/SubTitle.vue'
 import Input from '@/components/Form/Input.vue'
 import Button from '@/components/Form/Button.vue'
 import Link from '@/components/Form/Link.vue'
+import Footer from '@/components/Footer/Footer.vue'
 export default {
     name: 'Login',
-    components: {SubTitle, Header, Input, Button, Link},
+    components: {SubTitle, Header, Input, Button, Link, Footer},
     data(){
         return {
             user: {

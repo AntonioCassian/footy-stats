@@ -61,6 +61,7 @@
                 </b-row>
             </b-container>
         </div>
+        <Footer />
     </div>
 </template>
 
@@ -83,8 +84,9 @@ import TitleList from '@/components/Lista/TitleList.vue'
 import GroupList from '@/components/Lista/GroupList.vue'
 import GroupFeat from '@/components/Lista/GroupFeat.vue'
 import GroupS from '@/components/Lista/GroupS.vue'
+import Footer from '@/components/Footer/Footer.vue'
 export default {
-    components: {Header, PageTitle, Nav, NavSecund, TabTitle, Table, Statics, TeamList, Perguntas, SubTitle, Button, Embed, ButtonTag, ListaS, TitleList, GroupList, GroupFeat, GroupS}
+    components: {Header, PageTitle, Nav, NavSecund, TabTitle, Table, Statics, TeamList, Perguntas, SubTitle, Button, Embed, ButtonTag, ListaS, TitleList, GroupList, GroupFeat, GroupS, Footer}
 }
 </script>
 
